@@ -69,7 +69,7 @@ def _generate_email(subject_model, content_model, number_of_sentences=DEFAULT_NU
 
 
 def _generate_emails(number_of_emails, content_model_path=CONTENT_MODEL_PATH, subject_model_path=SUBJECT_MODEL_PATH,
-                     number_of_sentences=DEFAULT_NUMBER_OF_EMAILS, **kwargs):
+                     number_of_sentences=DEFAULT_NUMBER_OF_SENTENCES, **kwargs):
     subject_model = load_subject_model(subject_model_path)
     content_model = load_content_model(content_model_path)
     for _ in range(number_of_emails):
