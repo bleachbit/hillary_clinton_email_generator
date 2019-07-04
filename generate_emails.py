@@ -22,10 +22,8 @@ def _get_random_recipient():
 
 
 def _get_random_datetime(min_year=2011, max_year=2012):
-    start = datetime(min_year, 1, 1, 00, 00, 00)
-    years = max_year - min_year + 1
-    end = start + timedelta(days=365 * years)
-    return (start + (end - start) * random.random()).strftime('%A, %B %d, %Y %I:%M %p')  # Saturday, September 15, 2012 2:20 PM
+    date = datetime.strptime('{} {}'.format(random.randint(1, 365), random.randint(min_year, max_year)), '%j %Y')
+    return date.strftime('%A, %B %d, %Y %I:%M %p')  # Saturday, September 15, 2012 2:20 PM
 
 
 def _get_random_content(content_model, number_of_sentences=DEFAULT_NUMBER_OF_SENTENCES):
