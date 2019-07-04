@@ -18,7 +18,6 @@ usage: generate_emails.py [-h] [--number_of_sentences NUMBER_OF_SENTENCES]
 
 positional arguments:
   number_of_emails      Number of emails to generate. Default is 5
-https://www.bleachbit.org/news/bleachbit-stifles-investigation-hillary-clinton
 optional arguments:
   -h, --help            show this help message and exit
   --number_of_sentences NUMBER_OF_SENTENCES
