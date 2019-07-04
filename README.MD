@@ -1,6 +1,9 @@
 # Hillary Clinton Email Generator
 
-The project is using [markovify library](https://github.com/jsvine/markovify) (Markov Chains) to generate Hillary Clinton emails (and her colleagues) based on the [email corpus that's publicly available](https://kaggle.com/kaggle/hillary-clinton-emails).
+The project uses the [markovify library](https://github.com/jsvine/markovify) (Markov Chains) to generate by Hillary Clinton emails and her colleagues based on the [public email corpus](https://kaggle.com/kaggle/hillary-clinton-emails).
+
+This repository has only the command-line version, which requires Python. For a GUI version with an installer, use [BleachBit](https://www.bleachbit.org)
+
 
 #### To generate emails
 Call `python generate_emails.py <number_of_emails>`. To use additional arguments, refer to:
@@ -53,11 +56,22 @@ optional arguments:
                         Hillary's emails. Default is False
   --emails_path EMAILS_PATH
                         Path to load the emails from. Default is
-                        /home/dio/Projects/upwork_clinton/Emails.csv
+                        ./Emails.csv
   --content_model_path CONTENT_MODEL_PATH
                         Path to load the content model from. Default is
-                        /home/dio/Projects/upwork_clinton/content_model.json
+                        ./content_model.json
   --subject_model_path SUBJECT_MODEL_PATH
                         Path to load the subject model from. Default is
-                        /home/dio/Projects/upwork_clinton/subject_model.json
+                        ./subject_model.json
 ```
+
+
+#### Licenses
+
+The Hillary Clinton data set is public domain.
+
+Markovify uses the MIT license.
+
+The Hillary Clinton email generator uses the GNU General Public License version 3](COPYING) or later.
+[Dionyz Lazar](https://dionysio.com/) wrote the original version under contract.
+Copyright (C) 2019 by Andrew Ziem.
