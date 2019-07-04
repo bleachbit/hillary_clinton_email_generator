@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import csv
 import json
 import os.path
@@ -28,7 +31,7 @@ def get_recipients():
     email_regex = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+")
     for email in _get_emails():
         for recipient in (email['ExtractedFrom'], email['ExtractedTo'], email['ExtractedCc'], email['MetadataFrom'], email['MetadataTo'], email['ExtractedTo']):
-            recipient = recipient.replace('©', '@')  # fixes some mistakes
+            recipient = recipient.replace(r'©', r'@')  # fixes some mistakes
             result = re.search(email_regex, recipient)
             if result:
                 recipients.add(result.group(0))
