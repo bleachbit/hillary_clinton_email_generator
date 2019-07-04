@@ -2,10 +2,6 @@
 
 The project is using [markovify library](https://github.com/jsvine/markovify) (Markov Chains) to generate Hillary Clinton emails (and her colleagues) based on the [email corpus that's publicly available](https://kaggle.com/kaggle/hillary-clinton-emails).
 
-## Usage
-1. `git clone https://github.com/dionysio/hillary_clinton_email_generator`
-2. Install dependencies `pip install -r requirements.txt`
-
 #### To generate emails
 Call `python generate_emails.py <number_of_emails>`. To use additional arguments, refer to:
 ```
