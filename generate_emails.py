@@ -31,11 +31,14 @@ def _get_random_content(content_model, number_of_sentences=DEFAULT_NUMBER_OF_SEN
     for _ in range(number_of_sentences):
         content.append(content_model.make_sentence())
         content.append(random.choice([' ', '\n']))
-    return ''.join(content)
+    try:
+        return MIMEText(''.join(content))
+    except UnicodeEncodeError:
+        return _get_random_content(content_model, number_of_sentences=number_of_sentences)
 
 
 def _generate_email(subject_model, content_model, number_of_sentences=DEFAULT_NUMBER_OF_SENTENCES, subject_length=DEFAULT_SUBJECT_LENGTH):
-    message = MIMEText(_get_random_content(content_model, number_of_sentences=number_of_sentences))
+    message = _get_random_content(content_model, number_of_sentences=number_of_sentences)
 
     message['Subject'] = subject_model.make_short_sentence(subject_length)
     message['To'] = _get_random_recipient()
