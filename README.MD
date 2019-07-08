@@ -68,10 +68,10 @@ optional arguments:
 
 #### Licenses
 
-The United States Department of State released Hillary Clinton's emails into the public domain.
+The United States Department of State released [Hillary Clinton's emails](https://foia.state.gov/Search/Collections.aspx) into the public domain.
 
-Markovify uses the MIT license.
+Markovify uses the [MIT license](https://github.com/jsvine/markovify/blob/master/LICENSE.txt).
 
-The Hillary Clinton email generator uses the GNU General Public License version 3](COPYING) or later.
+The Hillary Clinton email generator uses the [GNU General Public License version 3](COPYING) or later.
 [Dionyz Lazar](https://dionysio.com/) wrote the original version under contract.
 Copyright (C) 2019 by Andrew Ziem.
