@@ -63,7 +63,7 @@ def _generate_model(field, emails_path=EMAILS_PATH, retain_original=True, markov
 
 def _serialize_model(model, model_path):
     with open(model_path, 'w') as model_file:
-        return json.dump(model.to_dict(), model_file)
+        return json.dump(model.to_dict(), model_file, separators=(',', ':'))
 
 
 def generate_models(subject_model_path=SUBJECT_MODEL_PATH, content_model_path=CONTENT_MODEL_PATH, emails_path=EMAILS_PATH, markov_model_state_size=MARKOV_MODEL_STATE_SIZE, **kwargs):
