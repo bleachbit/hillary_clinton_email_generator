@@ -21,6 +21,7 @@ for model in content subject; do
     echo Size before jq:
     ls -la ${BASENAME}
     bzip2 --keep --best ${BASENAME} || exit 1
+    mv ${BASENAME}.bz2 clinton_${BASENAME}.bz2
 done
 
 
