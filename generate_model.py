@@ -57,7 +57,7 @@ def get_recipients():
     return list(recipients)
 
 
-def _generate_model(field, emails_path=EMAILS_PATH, retain_original=True, markov_model_state_size=MARKOV_MODEL_STATE_SIZE, use_only_hillarys_emails=USE_ONLY_HILLARYS_EMAILS, **kwargs):
+def _generate_model(field, emails_path=EMAILS_PATH, retain_original=False, markov_model_state_size=MARKOV_MODEL_STATE_SIZE, use_only_hillarys_emails=USE_ONLY_HILLARYS_EMAILS, **kwargs):
     return markovify.Text(_get_emails(field=field, emails_path=emails_path, use_only_hillarys_emails=use_only_hillarys_emails), retain_original=retain_original, state_size=markov_model_state_size, **kwargs)
 
 
