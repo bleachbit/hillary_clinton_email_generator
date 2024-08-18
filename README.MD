@@ -65,6 +65,10 @@ optional arguments:
                         ./subject_model.json
 ```
 
+#### Links
+
+* [Wall Street Journal: Clinton Email Cruncher](https://github.com/wsjdata/clinton-email-cruncher)
+* [benhamner/hillary-clinton-emails](https://github.com/benhamner/hillary-clinton-emails)
 
 #### Licenses
 
